@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Register Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <img src="/assets/logo.png" alt="Logo">
+        </div>
+        <label class="bold-title">Contact Form</label>
+        <form action="/contacts" method="post">
+            <div class="form-group">
+                <label for="name">First Name</label>
+                <input id="name" class="form-control" type="text" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" class="form-control" type="text" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input id="phone" class="form-control" type="text" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" class="form-control" type="text" name="gender">
+                    <option>Choose...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register Contact</button> 
+        </form>
+    </div>
+</body>
+</html>

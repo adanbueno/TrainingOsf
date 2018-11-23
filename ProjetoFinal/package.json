@@ -1,0 +1,27 @@
+{
+  "name": "trainingosf",
+  "version": "1.0.0",
+  "description": "- **Aluno:** Adan Buenos \r - **Curso:** Engenharia Da Computação",
+  "main": "end.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adanbueno/TrainingOsf.git"
+  },
+  "author": "adanbueno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adanbueno/TrainingOsf/issues"
+  },
+  "homepage": "https://github.com/adanbueno/TrainingOsf#readme",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "debug": "^4.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "request": "^2.88.0"
+  }
+}
