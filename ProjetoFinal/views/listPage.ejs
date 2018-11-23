@@ -44,10 +44,10 @@
                                 <%=contacts[i].gender%>
                             </td>
                             <td>
-                                <button class="btn btn-warning">Edit</button>
+                                <button class="btn btn-warning" >Edit</button>
                             </td>
                             <td>
-                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-danger" onclick="deleteContact(`<%=contacts[i]._id%>`)">Delete</button>
                             </td>
                         </tr>
                         <%}%>
@@ -64,6 +64,16 @@
     <script src="/js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        function deleteContact(id){
+            $.ajax({
+                type:"delete",
+                url: "/contacts/" + id,
+                success: function(result){
+                    location.reload();
+                }                 
+            });
+        } 
+    </script>
 </body>
-
 </html>

@@ -36,7 +36,7 @@ app.get('/contacts', function (req, res) {
 
 })
 
-app.get("/", function (req, res) {
+app.get("/registerPage", function (req, res) {
     res.render('registerPage')
 })
 
@@ -52,12 +52,13 @@ app.post('/contacts', function (req, res) {
         }
     }, function (err, response, body) {
         res.send(body.body)
-        console.log("ok")
+        
     })
 })
 
 // Update a contact → /contacts:id
 app.post('/contacts/:id', function (req, res) {
+    console.log(`${req.body.id}`)
     request.put({
         url: 'https://cryptic-retreat-41638.herokuapp.com/api/contacts' + req.params.id,
         form: {
@@ -68,7 +69,7 @@ app.post('/contacts/:id', function (req, res) {
         }
     }, function (err, response, body) {
         res.send(body.body)
-        console.log("ok")
+        res.redirect('/')
     })
 })
 
@@ -91,8 +92,10 @@ app.get('/contacts/:id', function (req, res) {
         function (err, body) {
             if (err) { return console.log(err) }
             console.log(body.body.data);
-            
             res.send(JSON.stringify(body.body.data))
+            res.render('SearchPage',{
+            contact: body.data.data
+            })
         })
 })
 
