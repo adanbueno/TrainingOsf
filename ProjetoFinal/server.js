@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));//é utilizado para setar o u
 app.use(express.static(__dirname + '/public'));
 // Listing contacts → /contacts
 app.get('/contacts', function (req, res) {
-    console.log('/contacts ====');
+    //console.log('/contacts ====');
 
     request.get('https://cryptic-retreat-41638.herokuapp.com/api/contacts', { json: true },
         function (err, body) {
@@ -51,8 +51,8 @@ app.post('/contacts', function (req, res) {
             gender: `${req.body.gender}`
         }
     }, function (err, response, body) {
-        res.send(body.body)
-        
+        //res.send(body.body)
+        res.redirect('/contacts')
     })
 })
 
@@ -71,6 +71,20 @@ app.post('/contacts/:id', function (req, res) {
         res.send(body.body)
         res.redirect('/')
     })
+})
+
+app.get('/contacts/:id/update', function (req, res) {
+    console.log(`${req.body.id}`)
+    request.get('https://cryptic-retreat-41638.herokuapp.com/api/contacts/' + req.params.id
+        , { json: true },
+        function (err, body) {
+            if (err) { return console.log(err) }
+            console.log("update "+body.body.data);
+            //res.send(JSON.stringify(body.body))
+            res.render('editPage',{
+            contact: body.body.data
+            })
+        })
 })
 
 // Delete a contact → /contacts/:id

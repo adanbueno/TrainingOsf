@@ -44,7 +44,7 @@
                                 <%=contacts[i].gender%>
                             </td>
                             <td>
-                                <button class="btn btn-warning" >Edit</button>
+                                <a class="btn btn-warning" href="/contacts/<%=contacts[i]._id%>/update" >Edit</a>
                             </td>
                             <td>
                                 <button class="btn btn-danger" onclick="deleteContact(`<%=contacts[i]._id%>`)">Delete</button>

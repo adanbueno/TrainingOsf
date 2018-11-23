@@ -3,12 +3,12 @@
 - **Aluno:** Adan Buenos 
 - **Curso:** Engenharia Da Computação
 
-# Atividade 1
+# Activity 1
 
-- **Introdução a Nodejs + Express, e HTML, CSS e Boostrap**
-- **Desenvolver um formulario com tudo que foi passado no 1 dia**
+- ** Introduction to Nodejs + Express, and HTML, CSS and Boostrap **
+- ** Develop a form with everything that was passed in the 1 day **
 
-# Atividade 2
+# Activity 2
 
 - **Create a Node.js app manually (npm init)**
 - **Make it run on port 3050**
